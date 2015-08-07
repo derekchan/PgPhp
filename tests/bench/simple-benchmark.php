@@ -5,9 +5,8 @@
  * built-in libs.
  */
 
-require (dirname(__FILE__) . '/../pg.php');
 
-$host = 'locahost';
+$host = 'localhost';
 
 
 

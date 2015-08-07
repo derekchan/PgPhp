@@ -1,12 +1,6 @@
 <?php
 
-require_once 'pg.php';
-//require_once 'pg.exq.php';
-
-//use pg\exq as pgext;
-
-
-
+require_once __DIR__ . '/vendor/autoload.php';
 
 function info () {
     $args = func_get_args();
@@ -14,10 +8,8 @@ function info () {
     vprintf("{$fmt}\n", $args);
 }
 
-
-
 try {
-    $dbh = new pg\Connection;
+    $dbh = new pg\Connection();
     $dbh->connect();
     info("Connected OK");
 } catch (Exception $e) {
@@ -25,15 +17,10 @@ try {
 }
 
 
-
-
-
-
-/* Test code - Basic queries
+/* Test code - Basic queries */
 $q = new pg\Query('select * from da_table;insert into da_table (lady_curtain) values (\'Whale oil beef hooked\');');
 
 $q = new pg\Query('select * from da_table where lady_curtain = \'K\';select * from da_table;update da_table set lady_curtain=\'Hiyah!!\' where lady_curtain=\'Hiyah!\'');
-
 
 //$q = new pg\Query('copy copy_test from stdin with csv');
 //$q->pushCopyData("1, Fooking Heel!\n2, Fooking Heel!\n3, Fooking Heel!\n4, Fooking Heel!\n5, Fooking Heel!\n6, Fooking Heel!\n7, Fooking Heel!\n8, Fooking Heel!");
@@ -49,7 +36,7 @@ echo displayQueryResultSet($q->getResults());
 
 $dbh->close();
 return;
-  */
+
 
 
 
