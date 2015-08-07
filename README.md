@@ -3,6 +3,8 @@ PgPhp - An implementation of the postgre protocol in pure PHP
 
 A pure PHP PostgreSQL connector that works - sometimes you just need a quick and dirty way to connect to PostgreSQL, but for any reasons you do not have access to the native driver, and you do not care about performance.
 
+_Currently only works in Linux / UNIX-like environment as it depends on "/usr/bin/hexdump"_
+
 ### Usage
 
 See [examples.php](examples.php)
