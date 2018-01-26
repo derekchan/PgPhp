@@ -1,7 +1,7 @@
 {
     "name": "derekchan/pg-php",
     "description": "An implementation of the Postgres TCP protocol in pure PHP",
-    "license": "LGPL",
+    "license": "LGPL-2.1-or-later",
     "authors": [
         {
             "name": "Derek Chan",
